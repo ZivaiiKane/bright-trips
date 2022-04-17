@@ -22,6 +22,7 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { TimelineComponent } from './features/dashboard/pages/timeline/timeline.component';
 import { CalendarComponent } from './features/dashboard/pages/calendar/calendar.component';
 import { ProfileComponent } from './features/dashboard/pages/profile/profile.component';
+import { TripCardComponent } from './features/dashboard/components/trip-card/trip-card.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ProfileComponent } from './features/dashboard/pages/profile/profile.com
     TimelineComponent,
     CalendarComponent,
     ProfileComponent,
+    TripCardComponent,
   ],
   imports: [
     BrowserModule,
