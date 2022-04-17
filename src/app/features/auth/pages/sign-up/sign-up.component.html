@@ -1,0 +1,77 @@
+<div class="mx-auto mt-56 w-72">
+  <form [formGroup]="signupForm" (ngSubmit)="submit()">
+    <div class="w-full py-1">
+      <label for="username" class="text-lg font-normal text-slate-500"
+        >Username</label
+      >
+      <input
+        class="w-full mt-1 h-12 px-2 font-normal border-[2.5px] border-slate-500 text-slate-500"
+        type="text"
+        id="username"
+        required
+        placeholder="JohnDoe123"
+        formControlName="username"
+      />
+      <p
+        class="bg-red-400 text-white text-sm px-3 py-[0.025rem] mt-2 absolute z-10"
+        *ngIf="username?.errors?.['required']"
+      >
+        Your username is required
+      </p>
+    </div>
+
+    <div class="w-full pt-6 pb-1">
+      <label for="email" class="text-lg font-normal text-slate-500"
+        >Email</label
+      >
+      <input
+        class="w-full mt-1 h-12 px-2 font-normal border-[2.5px] border-slate-500 text-slate-500"
+        type="text"
+        id="email"
+        required
+        placeholder="johndoe@mail.com"
+        formControlName="email"
+      />
+      <p
+        class="bg-red-400 text-white text-sm px-3 py-[0.025rem] mt-2 absolute z-10"
+        *ngIf="email?.errors?.['required']"
+      >
+        Your email is required
+      </p>
+    </div>
+
+    <div class="w-full py-6">
+      <label for="password" class="text-lg font-normal text-slate-500"
+        >Password</label
+      >
+      <input
+        class="w-full mt-1 h-12 px-2 font-normal border-[2.5px] border-slate-500 text text-slate-500"
+        type="password"
+        id="password"
+        required
+        placeholder="********"
+        formControlName="password"
+      />
+      <p
+        class="bg-red-400 text-white px-3 py-[0.025rem] text-sm mt-2 absolute z-10"
+        *ngIf="password?.errors?.['required']"
+      >
+        A password is required
+      </p>
+    </div>
+
+    <button
+      class="w-full py-2 mt-5 text-lg font-normal text-white auth-btn bg-cyan-600"
+      type="submit"
+    >
+      Signup
+    </button>
+  </form>
+
+  <p class="mt-8 text-center text-slate-500">
+    Already have an account?
+    <a routerLink="/sign-in" class="underline cursor-pointer text-cyan-600"
+      >Signin</a
+    >
+  </p>
+</div>
