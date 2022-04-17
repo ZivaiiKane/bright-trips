@@ -15,6 +15,13 @@ import { SignUpComponent } from './features/auth/pages/sign-up/sign-up.component
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { MainComponent } from './features/dashboard/pages/main/main.component';
+import { NavbarComponent } from './features/dashboard/components/navbar/navbar.component';
+import { ImageSliderComponent } from './features/dashboard/components/image-slider/image-slider.component';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { TimelineComponent } from './features/dashboard/pages/timeline/timeline.component';
+import { CalendarComponent } from './features/dashboard/pages/calendar/calendar.component';
+import { ProfileComponent } from './features/dashboard/pages/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +30,12 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     BottomNavbarComponent,
     SignInComponent,
     SignUpComponent,
+    MainComponent,
+    NavbarComponent,
+    ImageSliderComponent,
+    TimelineComponent,
+    CalendarComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +48,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    IvyCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
