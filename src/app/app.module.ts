@@ -23,6 +23,11 @@ import { TimelineComponent } from './features/dashboard/pages/timeline/timeline.
 import { CalendarComponent } from './features/dashboard/pages/calendar/calendar.component';
 import { ProfileComponent } from './features/dashboard/pages/profile/profile.component';
 import { TripCardComponent } from './features/dashboard/components/trip-card/trip-card.component';
+import { ItineraryListComponent } from './features/dashboard/components/itinerary-list/itinerary-list.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatIconModule } from '@angular/material/icon';
+import { ItineraryComponent } from './features/dashboard/components/itinerary/itinerary.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -38,6 +43,8 @@ import { TripCardComponent } from './features/dashboard/components/trip-card/tri
     CalendarComponent,
     ProfileComponent,
     TripCardComponent,
+    ItineraryListComponent,
+    ItineraryComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +58,9 @@ import { TripCardComponent } from './features/dashboard/components/trip-card/tri
     AngularFirestoreModule,
     AngularFireAuthModule,
     IvyCarouselModule,
+    DragDropModule,
+    MatIconModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

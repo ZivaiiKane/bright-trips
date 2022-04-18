@@ -1,0 +1,26 @@
+<mat-card class="outer-card">
+  <mat-card-header>
+    <ng-content></ng-content>
+    <mat-card-title>
+      {{ itinerary.destination }}
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{ itinerary.id }}
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <div
+    class="trips"
+    cdkDropList
+    cdkDropListOrientation="vertical"
+    (cdkDropListDropped)="tripDrop($event)"
+  >
+    <div
+      class="inner-card"
+      cdkDrag
+      *ngFor="let trip of itinerary.trips; let i = index"
+    >
+      <mat-card [ngClass]="trip.label">{{ trip.description }}</mat-card>
+    </div>
+  </div>
+</mat-card>
