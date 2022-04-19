@@ -1,4 +1,4 @@
-<div class="mx-auto mt-56 w-72">
+<div class="mx-auto mt-56 overflow-hidden w-72">
   <form [formGroup]="signupForm" (ngSubmit)="submit()">
     <div class="w-full py-1">
       <label for="username" class="text-lg font-normal text-slate-500"
@@ -61,7 +61,7 @@
     </div>
 
     <button
-      class="w-full py-2 mt-5 text-lg font-normal text-white auth-btn bg-cyan-600"
+      class="w-full py-2 mt-5 text-lg font-normal text-white transition-all auth-btn bg-cyan-600"
       type="submit"
     >
       Signup
