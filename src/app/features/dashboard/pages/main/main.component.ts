@@ -9,9 +9,7 @@ import { CurrencyService } from '../../services/currency.service';
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent implements OnInit {
-  constructor(private currencyService: CurrencyService) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.currencyService.getCurrencyExchange();
-  }
+  ngOnInit(): void {}
 }
