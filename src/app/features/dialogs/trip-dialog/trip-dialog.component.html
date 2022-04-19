@@ -38,17 +38,6 @@
   </mat-form-field>
 
   <br />
-
-  <mat-button-toggle-group
-    #group="matButtonToggleGroup"
-    [(ngModel)]="data.trip.tag"
-  >
-    <mat-button-toggle *ngFor="let opt of labelOptions" [value]="opt">
-      <mat-icon [ngClass]="opt">{{
-        opt === "gray" ? "check_circle" : "lens"
-      }}</mat-icon>
-    </mat-button-toggle>
-  </mat-button-toggle-group>
 </div>
 <div mat-dialog-actions>
   <button
