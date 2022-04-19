@@ -1,7 +1,7 @@
 <div
   cdkDropList
   cdkDropListOrientation="horizontal"
-  class="itineraries"
+  class="flex flex-row flex-wrap itineraries"
   (cdkDropListDropped)="drop($event)"
 >
   <app-itinerary
@@ -11,4 +11,15 @@
   >
     <mat-icon cdkDragHandle class="handle">drag_indicator</mat-icon>
   </app-itinerary>
+
+  <div class="itinerary-button">
+    <button
+      name="new-itinerary"
+      class="px-4 py-2 text-white bg-cyan-600"
+      cdkDragDisabled
+      (click)="openItineraryDialog()"
+    >
+      <i class="fa-solid fa-plus"></i> New Itinerary
+    </button>
+  </div>
 </div>

@@ -15,12 +15,6 @@ export class ItineraryService {
   async createItinerary(data: Itinerary) {
     const user = await this.afAuth.currentUser;
     const today = new Date();
-    const date =
-      today.getFullYear() +
-      '-' +
-      (today.getMonth() + 1) +
-      '-' +
-      today.getDate();
 
     if (!user) {
       return;
@@ -33,8 +27,8 @@ export class ItineraryService {
         {
           description: 'Your trip description...',
           tag: 'purple',
-          start: date,
-          end: date,
+          start: today,
+          end: today,
           cost: 0.0,
         },
       ],
